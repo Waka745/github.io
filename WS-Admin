@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS行政書士事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .celadon-green {
+            background-color: #A3C9A8;
+        }
+        .text-celadon-green {
+            color: #A3C9A8;
+        }
+        .border-celadon-green {
+            border-color: #A3C9A8;
+        }
+        .hover\:bg-celadon-green:hover {
+            background-color: #A3C9A8;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            color: #1a202c; /* charcoal black for active link */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+
+        <!-- Language Switcher -->
+        <div class="flex justify-end mb-4">
+            <button id="lang-ja" class="px-4 py-2 text-sm rounded-full bg-gray-300 hover:bg-gray-400 transition">日本語</button>
+            <button id="lang-en" class="px-4 py-2 text-sm rounded-full bg-gray-200 hover:bg-gray-400 transition ml-2">English</button>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center py-12 rounded-2xl celadon-green shadow-lg mb-8">
+            <h1 class="text-4xl sm:text-5xl font-bold text-white" id="site-name-ja">WS行政書士事務所</h1>
+            <h1 class="text-4xl sm:text-5xl font-bold text-white hidden" id="site-name-en">WS Administrative Scrivener Office</h1>
+            <p class="mt-4 text-xl text-white font-semibold" id="subtitle">Certified Visa Specialist</p>
+            <p class="mt-8 text-xl text-white max-w-xl mx-auto" id="catch-ja">取次申請行政書士がビザ申請、書類作成をサポートいたします。</p>
+            <p class="mt-8 text-xl text-white max-w-xl mx-auto hidden" id="catch-en">As a certified visa specialist, we assist you with visa applications and document creation.</p>
+        </header>
+
+        <!-- Main SVG Image -->
+        <div class="mb-8 rounded-2xl overflow-hidden shadow-lg flex justify-center items-center celadon-green" style="height: 400px;">
+            <svg class="h-64 w-64 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 4h-4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM9 13H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z" opacity=".2"/>
+                <path d="M19 2H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zM5 4h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/>
+            </svg>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="bg-white p-4 rounded-2xl shadow-md mb-8">
+            <ul class="flex flex-col sm:flex-row justify-around text-center">
+                <li class="mb-2 sm:mb-0"><a href="#home" class="nav-link text-lg text-gray-600 hover:text-gray-900 transition" id="nav-home-ja">Home</a></li>
+                <li class="mb-2 sm:mb-0"><a href="#contact" class="nav-link text-lg text-gray-600 hover:text-gray-900 transition" id="nav-contact-ja">お問い合わせ</a></li>
+                <li class="mb-2 sm:mb-0"><a href="#services" class="nav-link text-lg text-gray-600 hover:text-gray-900 transition" id="nav-services-ja">サービス</a></li>
+                <li class="mb-2 sm:mb-0"><a href="#fee" class="nav-link text-lg text-gray-600 hover:text-gray-900 transition" id="nav-fee-ja">料金</a></li>
+                <li class="mb-2 sm:mb-0"><a href="#about" class="nav-link text-lg text-gray-600 hover:text-gray-900 transition" id="nav-about-ja">事務所案内</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main class="space-y-12">
+
+            <!-- Home Section -->
+            <section id="home" class="bg-white p-8 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green" id="home-title-ja">ホーム</h2>
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green hidden" id="home-title-en">Home</h2>
+                <p id="home-text-ja">
+                    WS行政書士事務所は、ビザ申請や自動車関連の手続きを通じて、お客様の多様なニーズにお応えします。外国籍のお客様の日本での生活をサポートするため、複雑な在留資格の手続きを専門としています。また、日々の生活に欠かせない車の関連手続きも代行し、お客様の負担を軽減します。
+                </p>
+                <p class="hidden" id="home-text-en">
+                    WS Administrative Scrivener Office supports a wide range of your needs through visa applications and vehicle-related procedures. We specialize in complex residence status procedures to help foreign nationals live in Japan. We also handle vehicle-related procedures, which are essential for daily life, to reduce your burden.
+                </p>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="bg-white p-8 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green" id="services-title-ja">サービス</h2>
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green hidden" id="services-title-en">Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Visa Services -->
+                    <div class="border-2 border-gray-200 p-6 rounded-xl transition hover:shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2" id="visa-service-title-ja">在留資格申請全般</h3>
+                        <h3 class="text-xl font-semibold mb-2 hidden" id="visa-service-title-en">General Visa Application</h3>
+                        <p class="text-gray-600" id="visa-service-text-ja">
+                            就労ビザ、配偶者ビザ、永住権など、様々な在留資格の申請手続きをサポートします。複雑な書類作成や入国管理局とのやり取りを代行し、円滑な手続きを支援します。
+                        </p>
+                        <p class="text-gray-600 hidden" id="visa-service-text-en">
+                            We support various residence status application procedures, including work visas, spouse visas, and permanent residency. We act as your representative for complex document preparation and communication with the Immigration Bureau, ensuring smooth procedures.
+                        </p>
+                    </div>
+                    <!-- Vehicle Services -->
+                    <div class="border-2 border-gray-200 p-6 rounded-xl transition hover:shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2" id="car-service-title-ja">車関連手続き</h3>
+                        <h3 class="text-xl font-semibold mb-2 hidden" id="car-service-title-en">Vehicle-Related Procedures</h3>
+                        <p class="text-gray-600" id="car-service-text-ja">
+                            車庫証明の申請・取得代行、自動車の登録、名義変更、廃車手続きなど、車に関する面倒な手続きを代行いたします。
+                        </p>
+                        <p class="text-gray-600 hidden" id="car-service-text-en">
+                            We handle troublesome vehicle-related procedures, such as proxy application for garage certificates, vehicle registration, name changes, and scrapping procedures.
+                        </p>
+                    </div>
+                    <!-- Other Support Services -->
+                    <div class="border-2 border-gray-200 p-6 rounded-xl transition hover:shadow-lg">
+                        <h3 class="text-xl font-semibold mb-2" id="other-support-title-ja">その他サポート</h3>
+                        <h3 class="text-xl font-semibold mb-2 hidden" id="other-support-title-en">Other Support</h3>
+                        <p class="text-gray-600" id="other-support-text-ja">
+                            在留カードの更新、住民登録や年金などの行政手続き、銀行口座の開設、携帯電話の契約、住居探しなど、来日後の生活に必要な様々な手続きをサポートします。
+                        </p>
+                        <p class="text-gray-600 hidden" id="other-support-text-en">
+                            We support various procedures necessary for life in Japan after arrival, such as resident card renewal, administrative procedures like resident registration and pensions, opening bank accounts, purchasing mobile phones, and finding housing.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fee Section -->
+            <section id="fee" class="bg-white p-8 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green" id="fee-title-ja">料金</h2>
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green hidden" id="fee-title-en">Fee</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="celadon-green text-white">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" id="table-service-ja">サービス内容</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider hidden" id="table-service-en">Service</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider" id="table-price-ja">報酬額 (税込)</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider hidden" id="table-price-en">Price (incl. tax)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- Visa Fee -->
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap" id="visa-fee-ja">在留資格申請代行</td>
+                                <td class="px-6 py-4 whitespace-nowrap hidden" id="visa-fee-en">Visa Application Proxy</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right" id="visa-price-ja">¥88,000〜</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right hidden" id="visa-price-en">¥88,000〜</td>
+                            </tr>
+                            <!-- Car Fee -->
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap" id="car-fee-ja">車庫証明申請代行</td>
+                                <td class="px-6 py-4 whitespace-nowrap hidden" id="car-fee-en">Garage Certificate Application Proxy</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right" id="car-price-ja">¥8,800〜</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right hidden" id="car-price-en">¥8,800〜</td>
+                            </tr>
+                            <!-- Name Change Fee -->
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap" id="name-change-fee-ja">自動車の名義変更代行</td>
+                                <td class="px-6 py-4 whitespace-nowrap hidden" id="name-change-fee-en">Vehicle Name Change Proxy</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right" id="name-change-price-ja">¥16,500〜</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right hidden" id="name-change-price-en">¥16,500〜</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-4 text-sm text-gray-500" id="fee-note-ja">
+                    ※上記料金は基本的な報酬額です。手続き内容により変動する場合がございますので、詳細はお問い合わせください。
+                </p>
+                <p class="mt-4 text-sm text-gray-500 hidden" id="fee-note-en">
+                    *The above prices are standard fees. They may vary depending on the details of the procedure. Please contact us for a detailed quote.
+                </p>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="bg-white p-8 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green" id="about-title-ja">事務所案内</h2>
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green hidden" id="about-title-en">About</h2>
+                <p id="about-text-ja">
+                    WS行政書士事務所は、お客様一人ひとりの状況に合わせた丁寧なサポートを心がけています。複雑な手続きをわかりやすくご説明し、不安なく進められるよう伴走します。お困りのことがございましたら、まずはお気軽にご相談ください。
+                </p>
+                <p class="hidden" id="about-text-en">
+                    WS Administrative Scrivener Office is committed to providing careful support tailored to each client's situation. We explain complex procedures in an easy-to-understand manner and accompany you so you can proceed without anxiety. If you have any difficulties, please feel free to contact us first.
+                </p>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-white p-8 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green" id="contact-title-ja">お問い合わせ</h2>
+                <h2 class="text-2xl font-bold mb-4 text-celadon-green hidden" id="contact-title-en">Contact</h2>
+                <form class="space-y-4">
+                    <div class="flex flex-col">
+                        <label for="name" class="mb-1" id="form-name-ja">お名前</label>
+                        <label for="name" class="mb-1 hidden" id="form-name-en">Name</label>
+                        <input type="text" id="name" name="name" class="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-celadon-green focus:outline-none">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="email" class="mb-1" id="form-email-ja">メールアドレス</label>
+                        <label for="email" class="mb-1 hidden" id="form-email-en">Email</label>
+                        <input type="email" id="email" name="email" class="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-celadon-green focus:outline-none">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="message" class="mb-1" id="form-message-ja">お問い合わせ内容</label>
+                        <label for="message" class="mb-1 hidden" id="form-message-en">Message</label>
+                        <textarea id="message" name="message" rows="5" class="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-celadon-green focus:outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full celadon-green text-white py-2 px-4 rounded-md hover:bg-opacity-80 transition" id="form-submit-ja">送信</button>
+                    <button type="submit" class="w-full celadon-green text-white py-2 px-4 rounded-md hover:bg-opacity-80 transition hidden" id="form-submit-en">Submit</button>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-4 text-gray-600">
+            <p>&copy; 2024 WS行政書士事務所. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Language Switcher -->
+    <script>
+        const langJaButton = document.getElementById('lang-ja');
+        const langEnButton = document.getElementById('lang-en');
+        const elements = [
+            'site-name', 'catch', 'nav-contact', 'nav-services', 'nav-fee', 'nav-about',
+            'home-title', 'home-text', 'services-title', 'visa-service-title', 'visa-service-text',
+            'car-service-title', 'car-service-text', 'fee-title', 'table-service', 'table-price',
+            'visa-fee', 'visa-price', 'car-fee', 'car-price', 'name-change-fee', 'name-change-price',
+            'fee-note', 'about-title', 'about-text', 'contact-title', 'form-name', 'form-email',
+            'form-message', 'form-submit', 'other-support-title', 'other-support-text'
+        ];
+
+        function setLanguage(lang) {
+            const isJa = lang === 'ja';
+            const hideLang = isJa ? 'en' : 'ja';
+            const showLang = isJa ? 'ja' : 'en';
+
+            elements.forEach(id => {
+                const elJa = document.getElementById(`${id}-ja`);
+                const elEn = document.getElementById(`${id}-en`);
+                if (elJa) elJa.classList.toggle('hidden', !isJa);
+                if (elEn) elEn.classList.toggle('hidden', isJa);
+            });
+
+            // Update navigation links for both languages
+            const navLinksJa = document.querySelectorAll('[id^="nav-"][id$="-ja"]');
+            const navLinksEn = document.querySelectorAll('[id^="nav-"][id$="-en"]');
+            navLinksJa.forEach(link => { link.classList.toggle('hidden', !isJa); });
+            navLinksEn.forEach(link => { link.classList.toggle('hidden', isJa); });
+            
+            // Set active link on language switch
+            const activeHash = window.location.hash.substring(1);
+            if (activeHash) {
+                const activeLink = document.querySelector(`.nav-link[href="#${activeHash}"]`);
+                if (activeLink) {
+                    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                    activeLink.classList.add('active');
+                }
+            }
+        }
+
+        // Handle navigation link clicks
+        document.querySelectorAll('a.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                
+                // Update active state
+                document.querySelectorAll('a.nav-link').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update URL hash
+                history.pushState(null, null, `#${targetId}`);
+            });
+        });
+
+        // Initial setup based on hash or default to Japanese
+        function initialSetup() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetElement = document.getElementById(hash);
+                if (targetElement) {
+                    const navLink = document.querySelector(`a.nav-link[href="#${hash}"]`);
+                    if (navLink) navLink.classList.add('active');
+                }
+            } else {
+                // Default to Home if no hash
+                const homeLink = document.querySelector('a.nav-link[href="#home"]');
+                if (homeLink) homeLink.classList.add('active');
+            }
+            // Set initial language to Japanese
+            setLanguage('ja');
+        }
+
+        langJaButton.addEventListener('click', () => setLanguage('ja'));
+        langEnButton.addEventListener('click', () => setLanguage('en'));
+        
+        // Initial setup on page load
+        window.onload = initialSetup;
+    </script>
+
+</body>
+</html>
